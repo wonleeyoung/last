@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="itemList">
+        <item>경기도 수원시 지역 어딘가</item>
+        <item>qqq</item>
+    </string-array>
+
+</resources>
