@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
+<!-- linearlayout을 활용해 vertical방향으로 정렬하고 Weight로 비율을 맞추면서 다른 해상도에 대응했습니다.-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +12,7 @@
     android:background="#E8E8E8"
     tools:context=".MainActivity"
     tools:visibility="visible">
-
+<!--constraintlayout을 이용해서 화면 사이즈가 바뀌어도 view들이 자리를 유지할 수 있게 처리함. 검색창 부분까지를 constraint로 묶었습니다.-->
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
@@ -82,6 +82,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--바뀌는 해상도에 대응하기 위해서 여백을 margin으로 처리하지 않고 linearlayout을 넣어서 비율을 맞췄습니다. -->
     <LinearLayout
         android:layout_weight="0.1"
         android:layout_width="match_parent"
@@ -89,7 +90,7 @@
 
     </LinearLayout>
 
-
+    <!--tablelayout활용 -->
     <TableLayout
         android:layout_weight="1.3"
         android:layout_width="match_parent"
@@ -128,6 +129,7 @@
 
 
     </TableLayout>
+    <!-- 여백 공간 -->
     <LinearLayout
         android:layout_weight="0.1"
         android:layout_height="0dp"
@@ -143,7 +145,7 @@
         android:layout_height="0dp"
 
         android:src="@drawable/pojang" />
-
+    <!-- gridlayout활용-->
     <GridLayout
         android:layout_margin="4dp"
         android:orientation="horizontal"
@@ -180,6 +182,7 @@
 
     </GridLayout>
 
+    <!--relativelayout이 view끼리 겹칠 수 있는 점을 활용해서 button을 투명하게 만들어 image위에 두었습니다.-->
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -212,12 +215,15 @@
                 />
         </LinearLayout>
     </RelativeLayout>
+    <!-- 여백 공간 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1">
 
     </LinearLayout>
+
+    <!-- framelayout의 특성인 겹치기를 이용해서 image위에 text를 올려봤습니다. fragment를 이용해서 text를 바꿀 수 있는 점을 나중에 활용할 수 있을 것 같습니다.  -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
