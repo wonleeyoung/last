@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:visibility="visible"
     android:weightSum="6"
+    android:background="#E8E8E8"
     tools:context=".MainActivity"
     tools:visibility="visible">
 
@@ -14,7 +17,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:background="@drawable/round_background">
 
         <androidx.constraintlayout.widget.Guideline
@@ -39,26 +42,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/guideline"
-            android:src="@drawable/menu_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:src="@drawable/menu"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:layout_width="50dp"
+            android:layout_height="0dp" />
         <ImageButton
-
+            android:layout_marginLeft="4dp"
             android:id="@+id/smileimage"
             android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/guideline"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/smile"
+
             android:layout_width="40dp"
             android:layout_height="40dp"/>
         <ImageButton
-
-
+            android:layout_marginRight="4dp"
             app:layout_constraintEnd_toStartOf="@+id/smileimage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/guideline"
-            android:src="@drawable/search"
+            android:src="@drawable/bell"
             android:layout_width="40dp"
             android:layout_height="40dp"/>
 
@@ -77,6 +82,164 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_weight="1.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:stretchColumns="0,1">
+
+
+        <TableRow
+
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:weightSum="2">
+
+            <ImageView
+
+                android:layout_marginEnd="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/picture2" />
+
+            <ImageView
+                android:layout_marginStart="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/picture1" />
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent">
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:src="@drawable/pojang" />
+
+    <GridLayout
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:columnCount="2"
+        android:rowCount="1"
+        >
+
+        <ImageView
+            android:layout_marginRight="4dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_column="0"
+            android:src="@drawable/bmart">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_marginLeft="4dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:src="@drawable/mealkit">
+
+
+        </ImageView>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/fortest" />
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00ff0000" />
+            <Button
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                />
+            <Button
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/new_round">
+
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="지금이 기회!\n선착순 1만원 할인"
+            android:gravity="center"
+            android:textSize="30dp">
+
+        </TextView>
+
+
+    </FrameLayout>
 
 </LinearLayout>
+
